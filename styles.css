@@ -2,14 +2,15 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   color: #fff;
   font-family: "Khula", sans-serif;
   height: 100vh;
-  overflow: hidden;
-  margin: 0;
+  overflow: hidden;  
   text-align: center;
 }
 
@@ -23,12 +24,18 @@ a:hover {
 }
 
 .start {
-  font-size: 1.5rem;
+  font-size: 1.5rem;  
+}
+.start.col {
+  color: rgb(209, 96, 96);
 }
 
-h1 {
-  line-height: 1.4;
-  font-size: 4rem;
+.start.col:hover {
+  color: rgb(209, 56, 56);
+}
+
+h1 {  
+  font-size: 3rem;
 }
 
 .screen {
@@ -44,6 +51,10 @@ h1 {
 
 .screen.up {
   margin-top: -100vh;
+}
+
+.screen.down {
+  margin-bottom: 100vh;
 }
 
 .time-list {
@@ -83,19 +94,19 @@ h1 {
 
 .board {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
   width: 500px;
   height: 500px;
   background: linear-gradient(118.38deg, #29323c -4.6%, #485563 200.44%);
-  box-shadow: -8px -8px 20px #2a333d, 10px 7px 20px #475462;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   border-radius: 30px;
   overflow: hidden;
 }
 
-.circle {
-  background: linear-gradient(90deg, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
+.circle {  
   position: absolute;
   border-radius: 50%;
   cursor: pointer;
